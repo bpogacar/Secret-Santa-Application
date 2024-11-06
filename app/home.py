@@ -1,8 +1,9 @@
 import tkinter as tk
+from main import container
 
 class HomePage(tk.Frame):
-    def __init__(self, parent):
-        super().__init__(parent, bg='lightgreen')
+    def __init__(self):
+        super().__init__(container, bg='lightgreen')
         self.grid(row=0, column=0, stick="snew")
 
         label = tk.Label(self, text="Click to find out who is getting gifts for who in this years secret santa!", bg="lightgreen")
