@@ -23,7 +23,7 @@ container.pack(fill="both", expand=True)
 container.grid_columnconfigure(0, weight=1)
 container.grid_rowconfigure(0, weight=1)
 
-master_list = NameListManager({"Brian", "Bella", "Ben", "Jacob", "Elizabeth", "Jillian", "a", "b", "c" ,"d", "e", "f", "g" ,"h" ,"i" ,"k" , "l", "gm" ,"hn" ,"oi" ,"pk" , "pl"})
+master_list = NameListManager()
 
 homepage = HomePage(container, master_list)
 namelist_page = NameListPage(container, master_list)
