@@ -90,6 +90,9 @@ class NameListManager:
 
     def get_names(self):
         return self.names
+    
+    def get_constraints(self):
+        return self.constraints
         
         
 
