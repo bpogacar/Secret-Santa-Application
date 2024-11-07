@@ -8,6 +8,6 @@ class HomePage(tk.Frame):
         label = tk.Label(self, text="Click to find out who is getting gifts for who in this years secret santa!", bg="lightgreen")
         label.pack(pady=50)
 
-        randomizeButton = tk.Button(self, text="Generate List", command=on_randomize_click)
+        randomizeButton = tk.Button(self, text="Generate List", command='''INSERT METHOD HERE''')
         randomizeButton.pack(pady=50)
 
