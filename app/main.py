@@ -2,6 +2,7 @@ import tkinter as tk
 from home import HomePage
 from namepage import NameListPage
 from constraints import ConstraintsPage
+from manager import NameListManager
 
 root = tk.Tk()
 
@@ -22,9 +23,11 @@ container.pack(fill="both", expand=True)
 container.grid_columnconfigure(0, weight=1)
 container.grid_rowconfigure(0, weight=1)
 
-homepage = HomePage(container)
-namelist_page = NameListPage(container)
-constraints_page = ConstraintsPage(container)
+master_list = NameListManager()
+
+homepage = HomePage(container, master_list)
+namelist_page = NameListPage(container, master_list)
+constraints_page = ConstraintsPage(container, master_list)
 
 pages_menu.add_command(label="Home Page", command=lambda: change_frame(homepage))
 pages_menu.add_command(label="Edit Namelist", command=lambda: change_frame(namelist_page))
