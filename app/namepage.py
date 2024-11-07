@@ -9,8 +9,8 @@ class NameListPage(tk.Frame):
         add_people_message = tk.Label(self, text="Type a name to add them to the Secret Santa List!", bg="lightpink")
         remove_people_message = tk.Label(self, text="Click the 'X' button to the right of a name to remove that person from the Secret Santa List!", bg="lightpink")
 
-        add_people_message.pack(pady=50)
-        remove_people_message.pack(pady=50)
+        add_people_message.pack(pady=20)
+        remove_people_message.pack(pady=20)
 
         self.entry = tk.Entry(self)
         self.entry.pack(pady=5)

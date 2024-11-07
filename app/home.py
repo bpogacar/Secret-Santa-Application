@@ -7,10 +7,10 @@ class HomePage(tk.Frame):
         self.name_list = name_list
 
         label = tk.Label(self, text="Click to find out who is getting gifts for who in this years Secret Santa!", bg="lightgreen")
-        label.pack(pady=50)
+        label.pack(pady=20)
 
         randomizeButton = tk.Button(self, text="Generate List", command=self.on_button_click)
-        randomizeButton.pack(pady=50)
+        randomizeButton.pack(pady=20)
 
         self.result_frame = tk.Frame(self, bg="lightgreen")
         self.result_frame.pack(pady=20)
