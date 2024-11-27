@@ -34,5 +34,5 @@ jobs:
         python -c "import sys; print(sys.path)"
         
     - name: Run tests
-      run: pytest tests
+      run: PYTHONPATH=$PYTHONPATH pytest tests
     
