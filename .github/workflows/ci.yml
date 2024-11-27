@@ -26,11 +26,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install -e .
-    
-    - name: Debug Python Path
-      run: |
-        echo $PYTHONPATH
-        python -c "import sys; print(sys.path)"
         
     - name: Run tests
       run: PYTHONPATH=$PYTHONPATH pytest tests
