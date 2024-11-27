@@ -28,5 +28,10 @@ jobs:
 
     - name: Run tests
       env:
-        PYTHONPATH: ./app
+        PYTHONPATH: ${{ github.workspace }}/app
       run: pytest tests
+    
+    - name: Debug Python Path
+      run: |
+        echo $PYTHONPATH
+        python -c "import sys; print(sys.path)"
