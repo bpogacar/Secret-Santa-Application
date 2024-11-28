@@ -15,7 +15,7 @@ class NameListManager:
             self.add_constraint(name, name)
     
     def add_name(self, name):
-        if name in self.names:
+        if not name or name in self.names:
             return None
         self.names.add(name)
         self.add_constraint(name, name)
@@ -30,6 +30,8 @@ class NameListManager:
     def remove_associated_constraints(self, name):
         # we dont auto-remove the constraints when you delete a name
         # but we will give the user the option to if they want
+        # this function will also get rid of the default constriant,
+        # so it should never be used on names still in namelist.
         if not self.constraints:
             return None
         constraints = list(self.constraints)
