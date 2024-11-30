@@ -15,6 +15,8 @@ class NameListPage(tk.Frame):
         self.entry = tk.Entry(self)
         self.entry.pack(pady=5)
 
+        self.entry.bind('<Return>', lambda event: self.add_name())
+
         add_button = tk.Button(self, text="Add", command=self.add_name)
         add_button.pack(pady=5)
 
